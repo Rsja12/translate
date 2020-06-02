@@ -11,16 +11,12 @@ export class App extends Component {
         language: 'english'
     }
 
-    onLanguageChange = language => {
-        this.setState({
-            language
-        })
-    }
+    onLanguageChange = language => this.setState({ language })
 
     render() {
         return (
             <div className='ui container'>
-                
+
                 <LanguageSelector onLanguageChange={ this.onLanguageChange } />
 
                 <LanguageContext.Provider value={ this.state.language }>
