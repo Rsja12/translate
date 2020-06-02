@@ -6,7 +6,6 @@ import ColorContext from '../contexts/ColorContext'
 export class Button extends Component {
 
     renderSubmit(value) {
-        console.log(this) //=> instance of Button class
         return value === 'english' ? 'Submit' : 'Voorleggen'
     }
 
