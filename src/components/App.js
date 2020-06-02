@@ -33,9 +33,9 @@ export class App extends Component {
                 </div>
 
                 <LanguageContext.Provider value={ this.state.language }>
-                    <ColorContext >
-                        <UserCreate value={'red'}/>
-                    </ColorContext>
+                    <ColorContext.Provider value='red'>
+                        <UserCreate />
+                    </ColorContext.Provider>
                 </LanguageContext.Provider>
 
             </div>
