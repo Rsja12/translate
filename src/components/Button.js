@@ -5,8 +5,8 @@ import ColorContext from '../contexts/ColorContext'
 
 export class Button extends Component {
 
-    renderSubmit(value) {
-        return value === 'english' ? 'Submit' : 'Voorleggen'
+    renderSubmit(language) {
+        return language === 'english' ? 'Submit' : 'Voorleggen'
     }
 
     renderButton( color ) {
@@ -14,7 +14,7 @@ export class Button extends Component {
             <button className={`ui button ${color}`}>
                 <LanguageContext.Consumer>
                     {/* we have to pass a function and it gets called with whatever value is inside of the pipe */}
-                    { (value) => this.renderSubmit(value) }
+                    { ({ language }) => this.renderSubmit(language) }
                 </LanguageContext.Consumer>
             </button>
         )
