@@ -11,7 +11,7 @@ export class LanguageStore extends React.Component {
     render() {
         return(
             // the value is an obj with the state obj plus the onLanguageChange cb func
-            <Context.Provider value={ {...this.state, onLanguageChange} }>
+            <Context.Provider value={ {...this.state, onLanguageChange: this.onLanguageChange} }>
                 { this.props.children }
             </Context.Provider>
         )
